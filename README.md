@@ -1,80 +1,78 @@
 # AqdLens • عقد لينس
 
-### Know your contract. Protect your future.
+### Saudi Expatriate Companion
 
-**AqdLens** is a privacy-focused, multilingual web utility that helps expatriate workers in Saudi Arabia understand their salary structure, estimate end-of-service benefits, compare job offers, and identify contract terms that may deserve closer attention.
+**Know your contract. Protect your future.**
 
-The name **AqdLens** combines **ʿaqd (عقد)** — the Arabic word for *contract* — with *lens*: a clearer way to look at your employment contract.
+AqdLens is a multilingual web-based tool designed to help expatriate workers in Saudi Arabia better understand their **salary structure, end-of-service benefits (EOSB), and employment contract risks**.
 
-> **Independent project. Not affiliated with MHRSD, Qiwa, or the Saudi Government.**
+> **Independent project. Not affiliated with MHRSD, Qiwa, the Ministry of Justice, or the Government of Saudi Arabia.**
 
 ---
 
-## ✨ What AqdLens Does
+## About AqdLens
+
+Employment contracts and salary structures can be difficult to understand, particularly when compensation is divided between basic salary and allowances or when workers are unfamiliar with Saudi employment terminology.
+
+AqdLens aims to make this information easier to understand through simple, interactive and multilingual tools.
+
+The name **AqdLens** combines **ʿaqd (عقد)**, the Arabic word for *contract*, with the English word **lens**.
+
+It reflects the project's goal:
+
+> Helping workers see their contracts clearly and understand their rights before taking the next step.
+
+---
+
+## Features
+
+AqdLens currently provides three main tools:
 
 ### 01 · Salary Split
 
-Explore how the same total monthly package can be divided differently between **basic salary and allowances**.
+Understand how your monthly compensation is divided between **basic salary and allowances**.
 
-AqdLens helps illustrate how salary structure can affect calculations such as overtime and shows a **70% basic salary benchmark** for comparison.
+The tool shows:
 
-> The 70% figure is an illustrative negotiation benchmark, **not a legal minimum under Saudi Labor Law**.
+- Total monthly package
+- Basic salary percentage
+- Basic salary amount
+- Allowances
+- Estimated overtime rate
+- Estimated 5-year eligible-wage EOSB
+- Potential difference if only basic salary were used for EOSB
+
+AqdLens also provides an illustrative comparison against a **70% basic salary benchmark**.
+
+> **Important:** The 70% basic salary figure is an illustrative negotiation benchmark. Saudi Labor Law does not require this ratio. A low basic salary alone is not a violation.
 
 ---
 
-### 02 · End-of-Service Benefit Calculator
+### 02 · EOSB Calculator
 
-Estimate your **End-of-Service Benefit (EOSB)** using:
+Estimate your **End-of-Service Benefit (EOSB)** based on your employment information.
 
-- Monthly wage
-- Completed years of service
-- Additional months
-- Separation reason
+The calculator is designed to make the estimated benefit and the calculation behind it easier to understand.
 
-The calculator is designed to explain the calculation in simple terms rather than just displaying a final number.
+AqdLens references relevant provisions of Saudi Labor Law when presenting these estimates.
 
 ---
 
 ### 03 · Contract Audit
 
-Review important employment-contract terms and identify clauses or conditions that may deserve additional attention.
+Review important areas of an employment contract through a guided contract-audit tool.
 
-AqdLens focuses on helping users understand issues such as:
+The purpose is to help users identify areas of their contract that may deserve closer attention or clarification.
 
-- Salary structure
-- Probation
-- Overtime
-- End-of-service benefits
-- Wage-related clauses
-- Employment conditions
-- Contract risks
-
-A flagged item does not automatically mean that a contract violates Saudi law.
+The audit is an informational tool and **does not constitute legal approval or legal advice**.
 
 ---
 
-## ⚖️ Compare Two Job Offers
+## Plain-Language Glossary
 
-AqdLens can compare two employment offers side-by-side using the same service assumptions.
+AqdLens includes a glossary to make common employment terminology easier to understand.
 
-Compare:
-
-- Total monthly package
-- Basic salary
-- Allowances
-- Estimated overtime rate
-- Estimated EOSB
-- Difference between offers
-
-The comparison provides the numbers without attempting to rank the overall quality of the jobs.
-
----
-
-## 📖 Plain-Language Glossary
-
-Employment terminology can be confusing, especially when dealing with a different legal system.
-
-AqdLens explains commonly encountered terms including:
+Current topics include:
 
 - Basic salary
 - Allowances
@@ -85,138 +83,146 @@ AqdLens explains commonly encountered terms including:
 
 ---
 
-## 🌍 Multilingual
+## Multilingual
 
-AqdLens is designed for Saudi Arabia's diverse expatriate workforce and provides support for **seven languages**.
+AqdLens is designed for expatriate workers from different linguistic backgrounds.
 
-The goal is to make important employment information easier to understand regardless of a worker's first language.
+The website currently supports:
 
----
-
-## 🔒 Private by Design
-
-AqdLens is built around a simple principle:
-
-**Your employment information should remain yours.**
-
-Calculations are performed in the browser.
-
-- No account required
-- No contract upload required for calculators
-- Calculations stay in your browser
-- Feedback does not automatically include calculation data
-- Users are specifically asked not to submit passports, Iqama numbers, contracts, or other sensitive personal information through feedback
+- English
+- العربية — Arabic
+- മലയാളം — Malayalam
+- हिन्दी — Hindi
+- বাংলা — Bengali
+- தமிழ் — Tamil
+- ಕನ್ನಡ — Kannada
 
 ---
 
-## 🖨️ Export to PDF
+## Privacy
 
-Results from the active tool can be printed or saved as a PDF using the browser's built-in print functionality.
+AqdLens is designed with privacy in mind.
 
-This makes it easier to keep a copy of calculations or compare employment offers later.
+**Calculations stay in your browser. No account is needed.**
+
+Users are advised not to include sensitive personal information when submitting feedback, including:
+
+- Passport information
+- Iqama numbers
+- Employment contracts
+- Other sensitive personal information
+
+The feedback system opens an email draft for the user to review and send.
+
+**No feedback is sent automatically, and calculations are not attached to the email.**
 
 ---
 
-## 🏛️ Official Help & Verification
+## Official Help & Verification
 
-AqdLens encourages users to verify important employment matters through official Saudi channels.
+AqdLens encourages users to verify their individual circumstances through official Saudi channels.
 
-The platform provides quick access to resources including:
+The website provides access to resources including:
 
-- MHRSD helpline
+- **MHRSD helpline — 19911**
 - MHRSD contact information
 - Friendly settlement of labor disputes
 - Labor-law violation reporting
 - Ministry of Justice labor calculator
 - Qiwa contract services
 
----
-
-## 📚 Legal Foundation
-
-AqdLens calculations and explanations reference Saudi employment regulations, including provisions concerning:
-
-| Topic | Reference |
-|---|---|
-| End-of-service benefits | Saudi Labor Law Articles 84 & 85 |
-| Probation | Article 53 |
-| Overtime | Article 107 |
-| Wage definitions/basis | Articles 2 & 86 |
-| Passport protection | Council of Ministers Decision No. 166 and Implementing Regulations Article 6 |
-
-Legal references should be periodically reviewed as Saudi regulations and official guidance may change.
-
-**Legal references last checked: 01 October 2026.**
+These are external official services and are not operated by AqdLens.
 
 ---
 
-## 💬 Feedback & Error Reporting
+## Legal Foundation & Sources
 
-AqdLens includes a feedback system for reporting:
+AqdLens references the **Saudi Labor Law, Royal Decree No. M/51, as amended**, including:
 
-- Calculation issues
-- Technical problems
+| Provision | Topic |
+| --- | --- |
+| Articles 84 & 85 | End-of-service benefits |
+| Article 53 | Probation |
+| Article 107 | Overtime |
+| Articles 2 & 86 | Wage basis |
+
+For passport protection, AqdLens references:
+
+- Council of Ministers Decision No. 166
+- Implementing Regulations Article 6
+
+The website also links to official MHRSD resources covering:
+
+- Labor relations
+- Working conditions
+- Labor culture
+
+**Legal references checked: 01 October 2026**
+
+---
+
+## Important Disclaimer
+
+**AqdLens is an independent project. It is not affiliated with MHRSD, Qiwa, the Ministry of Justice, or the Government of Saudi Arabia.**
+
+Estimates and translations provided by AqdLens are **informational and are not legal advice**.
+
+The official Arabic law prevails.
+
+Users should verify their individual circumstances through official Saudi sources or with a qualified Saudi legal adviser.
+
+---
+
+## Feedback
+
+AqdLens includes a built-in **Feedback / Report an Error** feature.
+
+Users can report:
+
+- Calculation or technical issues
 - Translation issues
-- Incorrect or unclear information
-- General suggestions
+- Suggestions or other feedback
 
-Feedback is prepared as an email draft for the user to review before sending.
-
-Nothing is sent automatically.
+Please do **not** include passports, Iqama numbers, contracts, or sensitive personal information.
 
 ---
 
-## 🎯 Why AqdLens?
-
-For many expatriate workers, an employment offer is more complicated than the headline salary.
-
-Two jobs can advertise similar packages while having very different:
-
-- Basic salaries
-- Allowance structures
-- Overtime calculations
-- Employment terms
-
-AqdLens turns those numbers and terms into information that is easier to understand.
-
-The objective is simple:
-
-> **Clarity for your contract. Confidence for your next step.**
-
----
-
-## 👨‍💻 About
+## About the Creator
 
 AqdLens was created by **Joe Manu Thomas**, a Computer Science & Engineering student who grew up in Saudi Arabia.
 
-The project was created to help expatriate workers better understand salary structures, employment benefits, and contract terms through simple and accessible digital tools.
+The project was created to help expatriate workers understand their salary, employment benefits, and contract risks through simple, multilingual tools.
 
 ---
 
-## ⚠️ Disclaimer
+## Project Status
 
-AqdLens is an **independent research and empowerment utility**.
+AqdLens is an **independent project under active development**.
 
-It is **not affiliated with MHRSD, Qiwa, the Ministry of Justice, or the Government of Saudi Arabia**.
-
-Calculations, comparisons, translations, risk indicators, and explanations are provided for informational purposes and should **not be considered legal advice**.
-
-Saudi employment law and its application can depend on individual circumstances. The official Arabic text of applicable laws and regulations prevails.
-
-For important employment or legal decisions, verify the information through official Saudi government services or consult a qualified Saudi legal professional.
+Features, calculations, translations, legal references, and the user interface may continue to be improved over time.
 
 ---
 
-## 🚧 Status
+## Copyright
 
-AqdLens is actively being developed.
+**© 2026 Joe Manu Thomas · AqdLens (عقد لينس). All Rights Reserved.**
 
-Bug reports, calculation issues, translation corrections, and suggestions are welcome.
+This project, including its original source code, design, content, branding, and documentation, is protected by copyright.
+
+No permission is granted to copy, modify, distribute, sublicense, commercially use, or create derivative works from this project without prior written permission from the copyright holder.
+
+Third-party libraries, fonts, frameworks, and other dependencies remain subject to their respective licenses.
+
+**No open-source license is granted for AqdLens.**
 
 ---
 
-## 📄 Copyright
+<div align="center">
 
-**© 2026 AqdLens (عقد لينس). All Rights Reserved.**
+### AqdLens • عقد لينس
 
-Created by **Joe Manu Thomas**.
+**Clarity for your contract. Confidence for your next step.**
+
+*Know your contract. Protect your future.*
+
+</div>
