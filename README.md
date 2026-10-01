@@ -1,4 +1,4 @@
-# AqdLens • عقد لينس 🇸🇦
+# AqdLens • عقد لينس
 
 ### Know your contract. Protect your future.
 
