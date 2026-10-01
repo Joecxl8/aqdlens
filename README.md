@@ -1,4 +1,4 @@
-# 🇸🇦 AqdLens
+# AqdLens • عقد لينس
 
 **Understand your Saudi employment contract with confidence.**
 
