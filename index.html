@@ -7,6 +7,19 @@
 <meta name="description" content="AqdLens: Saudi overtime and EOSB estimates. حساب مستحقات نهاية الخدمة • سعودی لیبر لاء • Kuwenta ng End of Service Saudi. Independent, not a government service.">
 <title>AqdLens • عقد لينس</title>
 <link rel="manifest" href="./manifest.webmanifest">
+<style>.official-checks{padding:18px;margin-bottom:20px;border:1px solid var(--line);border-radius:12px}.official-checks a{display:inline-flex;align-items:center;min-height:48px;padding:10px 14px;margin:0 8px 8px 0;border:1px solid #457d6c;border-radius:8px;color:#a7f3d0;text-decoration:underline;text-underline-offset:3px}#exception-panel a{color:#99f6e4;text-decoration:underline}#exception-panel .inline-check{align-items:flex-start}#wage-preview{font-weight:700;font-size:22px}#reason{white-space:normal;min-height:52px}@media(max-width:560px){.official-checks a{display:flex;margin-inline-end:0}}</style>
+<style>
+.language-entry{padding:18px;border:1px solid #334155;background:#101622;border-radius:14px;margin-bottom:18px}.language-options{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.language-options button{min-height:48px;padding:10px 15px;border-radius:8px;background:#080d17;color:#eef3fa;border:1px solid #475569;font:inherit}.language-options button[aria-pressed=true]{background:#103b30;border-color:#34d399;color:#a7f3d0}.scope-notice{border-inline-start:3px solid #f59e0b;padding:12px 16px;margin-bottom:24px;background:#1b1911;font-size:14px;color:#f3e4c7}.scope-notice p{margin:5px 0}.scope-notice a{color:#99f6e4;text-decoration:underline}.shared-salary{padding:14px;background:#10221f;border:1px solid #28624f;border-radius:10px;margin-bottom:20px}.shared-salary p{margin:0 0 6px;color:#d1d5db;font-size:14px}.shared-salary strong{display:block;font-size:15px}.shared-salary button{display:block}.image-actions{padding:16px 0;border-top:1px solid var(--line);margin-top:20px}.image-actions button{margin:0 8px 8px 0;min-height:48px}.image-actions a{display:inline-block;min-height:48px}.image-actions [hidden]{display:none!important}.field:has(#ot-basic),.field:has(#ot-allow){display:none}#package{scroll-margin-top:180px}
+/* High contrast outdoor theme; print output keeps its own white-paper rules. */
+html[data-theme=light] body{--muted:#334155;--line:#94a3b8;--green:#047857;--teal:#006653;background:#f1f5f9!important;color:#102030!important}
+html[data-theme=light] :is(header,footer,.card,.tabs,.language-entry,.compare-card,.metric,.select-field,.date-field,.input-shell input,.language,.language-options button,.reset,.share-preview,.resources-drawer>summary,.percent-input){background:#fff!important;border-color:#94a3b8!important;color:#102030!important;box-shadow:none!important}
+html[data-theme=light] :is(p,label,span,strong,h1,h2,h3,h4,summary,dt,dd,small,li,legend,.subtext,.legal-mini,.method,.card-kicker,.big,.value,.calc-lines strong,.tab,.footer-bottom,.text-button,.equation){color:#102030!important}
+html[data-theme=light] :is(.basis-panel,.assumptions,.shared-salary,.mobile-result,.privacy,.explain,.compare-card.fair,.choice span,.audit-status){background:#e2f3ed!important;border-color:#457d6c!important;color:#102030!important}
+html[data-theme=light] :is(.scope-notice,.note,.cliff,.alert.amber-alert){background:#fff1cc!important;border-color:#926000!important;color:#4c3200!important}
+html[data-theme=light] .alert{background:#ffe4e6!important;color:#76172a!important;border-color:#9f1239!important}
+html[data-theme=light] :is(a,.text-button){color:#005c49!important}html[data-theme=light] :is(.error,.field-error){color:#a11229!important}html[data-theme=light] .action-primary{background:#006653!important;color:#fff!important;border-color:#006653!important}html[data-theme=light] .tab[aria-selected=true],html[data-theme=light] .language-options button[aria-pressed=true]{background:#c9ede0!important;color:#063d2c!important;border-color:#006653!important}html[data-theme=light] .output:before{display:none}html[data-theme=light] .intro h1{background:none!important;-webkit-text-fill-color:#102030!important}
+@media(max-width:560px){.language-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.language-entry{padding:14px}.language-options button{min-width:0;padding:8px}.scope-notice{font-size:14px}}
+</style>
 <link rel="apple-touch-icon" href="./icon-192.png">
 <meta name="keywords" content="حساب مستحقات نهاية الخدمة, سعودي, سعودی لیبر لاء, اقامہ فائنل خروج حساب, Kuwenta ng End of Service Saudi, EOSB, Saudi overtime calculator">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23070a13' stroke='%2310b981' stroke-width='4' d='M32 3 57 17v30L32 61 7 47V17Z'/%3E%3Cpath stroke='%232dd4bf' stroke-width='3' fill='none' d='M32 17v31M17 25h30M21 25l-6 12h12Zm22 0-6 12h12ZM23 48h18'/%3E%3C/svg%3E">
@@ -141,6 +154,15 @@ html[lang="ur"] body{font-family:"Segoe UI",Tahoma,Arial,system-ui,sans-serif;li
 </div>
 </header>
 <main class="wrap" id="tools">
+<section class="language-entry" aria-label="Language">
+<strong data-i18n="language"></strong>
+<div class="language-options">
+<button type="button" data-locale="en" lang="en">English</button><button type="button" data-locale="ar" lang="ar">العربية</button><button type="button" data-locale="ur" lang="ur">اردو</button><button type="button" data-locale="hi" lang="hi">हिन्दी</button><button type="button" data-locale="bn" lang="bn">বাংলা</button><button type="button" data-locale="ml" lang="ml">മലയാളം</button><button type="button" data-locale="ta" lang="ta">தமிழ்</button><button type="button" data-locale="kn" lang="kn">ಕನ್ನಡ</button>
+</div>
+<label class="inline-check"><input id="outdoor-mode" type="checkbox"><span data-i18n="outdoorMode"></span></label>
+<label class="inline-check"><input id="simple-view" type="checkbox"><span data-i18n="simpleView"></span></label>
+</section>
+<aside class="scope-notice"><strong data-i18n="scopeTitle"></strong><p data-i18n="scopeNotice"></p><a href="https://www.musaned.com.sa/" target="_blank" rel="noopener" data-i18n="domesticHelp"></a></aside>
 <div class="intro">
 <div>
 <p class="eyebrow" data-i18n="eyebrow">
@@ -351,6 +373,7 @@ html[lang="ur"] body{font-family:"Segoe UI",Tahoma,Arial,system-ui,sans-serif;li
 </div>
 </div>
 <section class="card additional-tool" id="overtime">
+<div class="shared-salary"><p data-i18n="sharedSalary"></p><strong id="shared-salary-values"></strong><button type="button" id="edit-salary" class="text-button" data-i18n="editSalary"></button></div>
 <h2 data-i18n="overtimeTitle">
 </h2>
 <p class="subtext" data-i18n="overtimeDesc">
@@ -358,16 +381,16 @@ html[lang="ur"] body{font-family:"Segoe UI",Tahoma,Arial,system-ui,sans-serif;li
 <div class="workspace">
 <div>
 <div class="form-grid">
-<div class="field">
-<label for="ot-basic" data-i18n="monthlyBasic">
+<div class="field" hidden>
+<label for="ot-basic" data-i18n="monthlyBasic" hidden>
 </label>
-<input id="ot-basic" class="date-field" type="number" min="0" max="10000000" step="0.01" value="1400" inputmode="decimal">
+<input id="ot-basic" class="date-field" type="hidden" min="0" max="10000000" step="0.01" value="1400" inputmode="decimal">
 <p id="error-ot-basic" class="field-error" hidden></p>
 </div>
-<div class="field">
-<label for="ot-allow" data-i18n="eligibleAllow">
+<div class="field" hidden>
+<label for="ot-allow" data-i18n="eligibleAllow" hidden>
 </label>
-<input id="ot-allow" class="date-field" type="number" min="0" max="10000000" step="0.01" value="2100" inputmode="decimal">
+<input id="ot-allow" class="date-field" type="hidden" min="0" max="10000000" step="0.01" value="2100" inputmode="decimal">
 <p id="error-ot-allow" class="field-error" hidden></p>
 </div>
 <div class="field">
@@ -492,6 +515,7 @@ html[lang="ur"] body{font-family:"Segoe UI",Tahoma,Arial,system-ui,sans-serif;li
 </span>
 </div>
 </div>
+<div class="assumptions"><strong data-i18n="eligibleWage"></strong><p id="wage-preview"></p><p data-i18n="wagePlain"></p></div>
 <div class="field">
 <label for="service-mode" data-i18n="serviceMode">
 </label>
@@ -550,8 +574,14 @@ html[lang="ur"] body{font-family:"Segoe UI",Tahoma,Arial,system-ui,sans-serif;li
 </option>
 <option value="resign" data-i18n="resignReason">
 </option>
+<option value="marriage87" data-i18n="marriage87"></option>
+<option value="birth87" data-i18n="birth87"></option>
+<option value="force87" data-i18n="force87"></option>
+<option value="review" data-i18n="reviewReason"></option>
 </select>
 </div>
+<div id="exception-panel" class="note" hidden><p data-i18n="exception87Note"></p><label class="inline-check"><input id="exception-confirm" type="checkbox"><span data-i18n="exceptionConfirm"></span></label><a href="https://www.hrsd.gov.sa/en/علاقات-العمل" target="_blank" rel="noopener" data-i18n="sourceLabor"></a></div>
+<p id="separation-review" class="note" hidden data-i18n="reviewSeparation"></p>
 <p id="eosb-error" class="error" hidden data-i18n="invalidEosb">
 </p>
 <div class="note">
@@ -713,6 +743,7 @@ html[lang="ur"] body{font-family:"Segoe UI",Tahoma,Arial,system-ui,sans-serif;li
 </div>
 </section>
 <div class="report-toolbar">
+<div class="official-checks"><a href="https://www.hrsd.gov.sa/en/ministry-services/services/end-service-benefit-calculator" target="_blank" rel="noopener" data-i18n="checkOfficial"></a><a href="https://www.qiwa.sa/" target="_blank" rel="noopener" data-i18n="viewQiwa"></a><p class="subtext" data-i18n="externalCheck"></p></div>
 <div class="action-row">
 <button type="button" id="copy-result" class="action-primary" data-i18n="copyResult"></button>
 <button type="button" id="print-button" class="action-primary" data-i18n="printReport">
@@ -725,6 +756,7 @@ html[lang="ur"] body{font-family:"Segoe UI",Tahoma,Arial,system-ui,sans-serif;li
 </p>
 </div>
 <p id="result-action-status" class="subtext" role="status"></p>
+<div class="image-actions"><button type="button" id="save-image" class="reset" data-i18n="saveImage"></button><button type="button" id="share-image" class="reset" hidden data-i18n="shareImage"></button><p class="subtext" data-i18n="imageHelp"></p><p id="image-status" class="subtext" role="status"></p><a id="image-download" class="text-button" hidden data-i18n="downloadImage"></a></div>
 <textarea id="result-copy-fallback" class="select-field" rows="7" readonly hidden data-i18n-aria="copyResult"></textarea>
 <details class="resources-drawer" id="resources">
 <summary data-i18n="resourcesTitle">
@@ -1207,6 +1239,30 @@ const CURRENCY_SYMBOL='⃁';
 LANGS.forEach(l=>{translations[l].sar='SAR';});
 /* New interface copy remains centralized; column order follows LANGS. */
 const refinementCopy={
+simpleView:['Simple view — fewer explanations','عرض مبسط — شروحات أقل','ലളിതമായ കാഴ്ച — കുറച്ച് വിശദീകരണങ്ങൾ','सरल दृश्य — कम विवरण','সহজ দৃশ্য — কম ব্যাখ্যা','எளிய காட்சி — குறைந்த விளக்கங்கள்','ಸರಳ ನೋಟ — ಕಡಿಮೆ ವಿವರಣೆಗಳು','سادہ منظر — کم وضاحت'],
+wagePlain:['Use your last monthly basic salary plus eligible fixed allowances, such as housing and transport. Do not leave allowances at zero if they form part of your wage. Articles 84 and 86: variable commissions may be excluded by agreement.','أدخل آخر راتب أساسي شهري مع البدلات الثابتة المستحقة، مثل السكن والنقل. لا تترك البدلات صفراً إن كانت جزءاً من أجرك. المادتان 84 و86: يجوز استبعاد العمولات المتغيرة باتفاق.','അവസാന മാസത്തെ അടിസ്ഥാന ശമ്പളവും അർഹമായ സ്ഥിര അലവൻസുകളും നൽകുക; ഉദാ. വീട്, യാത്ര. വേതനത്തിന്റെ ഭാഗമായ അലവൻസുകൾ പൂജ്യമാക്കരുത്. വകുപ്പുകൾ 84, 86: മാറുന്ന കമ്മീഷനുകൾ കരാർ പ്രകാരം ഒഴിവാക്കാം.','अंतिम मासिक मूल वेतन और पात्र तय भत्ते, जैसे आवास व परिवहन, जोड़ें। वेतन का हिस्सा होने पर भत्ते शून्य न छोड़ें। अनुच्छेद 84 और 86: समझौते से बदलने वाला कमीशन बाहर रखा जा सकता है।','শেষ মাসিক মূল বেতন ও প্রযোজ্য স্থায়ী ভাতা, যেমন বাসা ও যাতায়াত, লিখুন। বেতনের অংশ হলে ভাতা শূন্য রাখবেন না। ধারা 84 ও 86: চুক্তি অনুযায়ী পরিবর্তনশীল কমিশন বাদ যেতে পারে।','கடைசி மாத அடிப்படைச் சம்பளம் மற்றும் தகுதியான நிலையான வீடு, போக்குவரத்துப் படிகளை சேர்க்கவும். ஊதியத்தின் பகுதியாக இருந்தால் படிகளை பூஜ்யமாக விடாதீர்கள். பிரிவுகள் 84, 86: ஒப்பந்தப்படி மாறும் கமிஷனை விலக்கலாம்.','ಕೊನೆಯ ಮಾಸಿಕ ಮೂಲ ವೇತನ ಮತ್ತು ಅರ್ಹ ಸ್ಥಿರ ಭತ್ಯೆಗಳನ್ನು ಸೇರಿಸಿ. ವೇತನದ ಭಾಗವಾಗಿದ್ದರೆ ಭತ್ಯೆಗಳನ್ನು ಶೂನ್ಯ ಬಿಡಬೇಡಿ. ವಿಧಿ 84, 86: ಒಪ್ಪಂದದಿಂದ ಬದಲಾಗುವ ಕಮಿಷನ್ ಹೊರಗಿಡಬಹುದು.','آخری ماہانہ بنیادی تنخواہ اور اہل مقررہ الاؤنس، مثلاً رہائش و ٹرانسپورٹ، درج کریں۔ اجرت کا حصہ ہوں تو الاؤنس صفر نہ چھوڑیں۔ دفعات 84، 86: متغیر کمیشن معاہدے سے خارج ہو سکتا ہے۔'],
+marriage87:['Female worker: contract ended within 6 months of marriage (Art. 87)','عاملة: انتهاء العقد خلال 6 أشهر من الزواج (87)','സ്ത്രീ തൊഴിലാളി: വിവാഹത്തിന് 6 മാസത്തിനകം കരാർ അവസാനിച്ചു (87)','महिला: विवाह के 6 माह के भीतर अनुबंध समाप्त (87)','নারী কর্মী: বিয়ের ৬ মাসের মধ্যে চুক্তি শেষ (87)','பெண்: திருமணத்தின் 6 மாதங்களுக்குள் ஒப்பந்தம் முடிவு (87)','ಮಹಿಳೆ: ಮದುವೆಯ 6 ತಿಂಗಳೊಳಗೆ ಒಪ್ಪಂದ ಅಂತ್ಯ (87)','خاتون: شادی کے 6 ماہ کے اندر معاہدہ ختم (87)'],
+birth87:['Female worker: contract ended within 3 months of childbirth (Art. 87)','عاملة: انتهاء العقد خلال 3 أشهر من الولادة (87)','സ്ത്രീ തൊഴിലാളി: പ്രസവത്തിന് 3 മാസത്തിനകം കരാർ അവസാനിച്ചു (87)','महिला: प्रसव के 3 माह के भीतर अनुबंध समाप्त (87)','নারী কর্মী: সন্তান জন্মের ৩ মাসের মধ্যে চুক্তি শেষ (87)','பெண்: பிரசவத்தின் 3 மாதங்களுக்குள் ஒப்பந்தம் முடிவு (87)','ಮಹಿಳೆ: ಹೆರಿಗೆಯ 3 ತಿಂಗಳೊಳಗೆ ಒಪ್ಪಂದ ಅಂತ್ಯ (87)','خاتون: ولادت کے 3 ماہ کے اندر معاہدہ ختم (87)'],
+force87:['Departure due to force majeure beyond your control (Art. 87)','ترك العمل لقوة قاهرة خارجة عن الإرادة (87)','നിയന്ത്രണത്തിനതീതമായ അനിവാര്യ സാഹചര്യത്താൽ പിന്മാറ്റം (87)','नियंत्रण से बाहर अपरिहार्य परिस्थिति के कारण छोड़ना (87)','নিয়ন্ত্রণের বাইরে অনিবার্য কারণে প্রস্থান (87)','கட்டுப்பாட்டை மீறிய தவிர்க்க முடியாத காரணத்தால் விலகல் (87)','ನಿಯಂತ್ರಣ ಮೀರಿದ ಅನಿವಾರ್ಯ ಕಾರಣದಿಂದ ನಿರ್ಗಮನ (87)','اختیار سے باہر ناگزیر حالات کے باعث چھوڑنا (87)'],
+reviewReason:['Article 80 dismissal / probation / possible Article 81 / unsure','فصل وفق 80 / تجربة / احتمال تطبيق 81 / غير متأكد','വകുപ്പ് 80 / പ്രൊബേഷൻ / സാധ്യതയുള്ള 81 / ഉറപ്പില്ല','अनुच्छेद 80 / परिवीक्षा / संभावित 81 / अनिश्चित','ধারা 80 / পরীক্ষাকাল / সম্ভাব্য 81 / নিশ্চিত নই','பிரிவு 80 / சோதனைக் காலம் / சாத்தியமான 81 / உறுதியில்லை','ವಿಧಿ 80 / ಪರೀಕ್ಷಾ ಅವಧಿ / ಸಾಧ್ಯ 81 / ಖಚಿತವಿಲ್ಲ','دفعہ 80 / آزمائشی مدت / ممکنہ 81 / یقین نہیں'],
+exception87Note:['Article 87 can provide the full accrued award when its conditions apply. This selection is a conditional estimate, not confirmation that your case qualifies. Verify the dates and circumstances with HRSD or a qualified adviser.','قد تمنح المادة 87 كامل المكافأة المتراكمة عند تحقق شروطها. هذا تقدير مشروط لا إثبات للاستحقاق. تحقق من التواريخ والوقائع لدى الوزارة أو مستشار مؤهل.','വകുപ്പ് 87ന്റെ നിബന്ധനകൾ ബാധകമായാൽ പൂർണ്ണ സമ്പാദിത തുക ലഭിക്കാം. ഇത് നിബന്ധനാപരമായ കണക്കാണ്; അർഹതയുടെ സ്ഥിരീകരണമല്ല. തീയതികളും സാഹചര്യങ്ങളും HRSDയുമായി പരിശോധിക്കുക.','अनुच्छेद 87 की शर्तें पूरी होने पर पूरा अर्जित पुरस्कार मिल सकता है। यह सशर्त अनुमान है, पात्रता की पुष्टि नहीं। तारीखें और परिस्थितियाँ HRSD या योग्य सलाहकार से जाँचें।','ধারা 87-এর শর্ত পূরণ হলে পূর্ণ অর্জিত সুবিধা মিলতে পারে। এটি শর্তসাপেক্ষ অনুমান, যোগ্যতার নিশ্চয়তা নয়। তারিখ ও পরিস্থিতি HRSD বা উপদেষ্টার সঙ্গে যাচাই করুন।','பிரிவு 87 நிபந்தனைகள் பொருந்தினால் முழு ஈட்டிய தொகை கிடைக்கலாம். இது நிபந்தனை மதிப்பீடு; தகுதி உறுதி அல்ல. தேதிகளையும் சூழலையும் HRSD அல்லது ஆலோசகரிடம் சரிபார்க்கவும்.','ವಿಧಿ 87ರ ಷರತ್ತುಗಳು ಅನ್ವಯಿಸಿದರೆ ಪೂರ್ಣ ಗಳಿಸಿದ ಮೊತ್ತ ಸಿಗಬಹುದು. ಇದು ಷರತ್ತುಬದ್ಧ ಅಂದಾಜು, ಅರ್ಹತೆಯ ದೃಢೀಕರಣವಲ್ಲ. ದಿನಾಂಕ ಮತ್ತು ಸಂದರ್ಭಗಳನ್ನು HRSD ಅಥವಾ ಸಲಹೆಗಾರರೊಂದಿಗೆ ಪರಿಶೀಲಿಸಿ.','دفعہ 87 کی شرائط پوری ہوں تو مکمل جمع شدہ انعام مل سکتا ہے۔ یہ مشروط تخمینہ ہے، اہلیت کی تصدیق نہیں۔ تاریخوں اور حالات کی HRSD یا اہل مشیر سے جانچ کرائیں۔'],
+exceptionConfirm:['Calculate on the assumption that this condition applies.','احسب بافتراض انطباق هذا الشرط.','ഈ നിബന്ധന ബാധകമാണെന്ന അനുമാനത്തിൽ കണക്കാക്കുക.','यह शर्त लागू मानकर गणना करें।','এই শর্ত প্রযোজ্য ধরে হিসাব করুন।','இந்த நிபந்தனை பொருந்துவதாகக் கணக்கிடு.','ಈ ಷರತ್ತು ಅನ್ವಯಿಸುತ್ತದೆ ಎಂದು ಲೆಕ್ಕಹಾಕಿ.','یہ شرط لاگو ہونے کے مفروضے پر حساب کریں۔'],
+reviewSeparation:['No automatic estimate for this selection. A valid Article 80 dismissal or termination during probation can exclude EOSB; Article 81 can preserve statutory rights. The facts must be reviewed. This does not mean that you are owed zero.','لا يوجد تقدير آلي لهذا الاختيار. قد يسقط استحقاق المكافأة بفصل صحيح وفق 80 أو إنهاء خلال التجربة، بينما قد تحفظ 81 الحقوق النظامية. يلزم فحص الوقائع؛ هذا لا يعني أن مستحقاتك صفر.','ഈ തിരഞ്ഞെടുപ്പിന് സ്വയമേവ കണക്കില്ല. സാധുവായ വകുപ്പ് 80 പിരിച്ചുവിടലോ പ്രൊബേഷൻ അവസാനിപ്പിക്കലോ EOSB ഒഴിവാക്കാം; 81 അവകാശങ്ങൾ സംരക്ഷിക്കാം. സാഹചര്യങ്ങൾ പരിശോധിക്കണം. തുക പൂജ്യം എന്നല്ല.','इस विकल्प पर स्वचालित अनुमान नहीं। वैध अनुच्छेद 80 बर्खास्तगी या परिवीक्षा में समाप्ति से EOSB नहीं मिल सकता; अनुच्छेद 81 अधिकार बचा सकता है। तथ्यों की समीक्षा ज़रूरी है। इसका अर्थ शून्य बकाया नहीं।','এই বিকল্পে স্বয়ংক্রিয় অনুমান নেই। বৈধ ধারা 80 বরখাস্ত বা পরীক্ষাকালে সমাপ্তিতে EOSB বাদ যেতে পারে; 81 অধিকার রাখতে পারে। তথ্য পর্যালোচনা দরকার। এর অর্থ শূন্য প্রাপ্য নয়।','இந்தத் தேர்வுக்கு தானியங்கிக் கணக்கில்லை. செல்லுபடியான பிரிவு 80 பணிநீக்கம் அல்லது சோதனைக் கால முடிவில் EOSB இல்லாமல் போகலாம்; 81 உரிமைகளைப் பாதுகாக்கலாம். உண்மைகளை ஆய்வு செய்ய வேண்டும். தொகை பூஜ்யம் என்பதல்ல.','ಈ ಆಯ್ಕೆಗೆ ಸ್ವಯಂಚಾಲಿತ ಅಂದಾಜಿಲ್ಲ. ಮಾನ್ಯ ವಿಧಿ 80 ವಜಾ ಅಥವಾ ಪರೀಕ್ಷಾ ಅವಧಿಯ ಅಂತ್ಯ EOSB ಹೊರಗಿಡಬಹುದು; 81 ಹಕ್ಕುಗಳನ್ನು ಉಳಿಸಬಹುದು. ಸಂಗತಿಗಳ ಪರಿಶೀಲನೆ ಅಗತ್ಯ. ಬಾಕಿ ಶೂನ್ಯ ಎಂದಲ್ಲ.','اس انتخاب پر خودکار تخمینہ نہیں۔ درست دفعہ 80 برطرفی یا آزمائشی مدت میں خاتمہ EOSB ختم کر سکتا ہے؛ 81 حقوق برقرار رکھ سکتی ہے۔ حقائق کا جائزہ ضروری ہے۔ اس کا مطلب صفر واجبات نہیں۔'],
+checkOfficial:['Cross-check EOSB on HRSD','تحقق من المكافأة لدى الوزارة','HRSDയിൽ EOSB പരിശോധിക്കുക','HRSD पर EOSB जाँचें','HRSD-তে EOSB যাচাই','HRSD-இல் EOSB சரிபார்','HRSDನಲ್ಲಿ EOSB ಪರಿಶೀಲಿಸಿ','HRSD پر EOSB جانچیں'],
+viewQiwa:['Open Qiwa to view your contract','افتح قوى لعرض عقدك','കരാർ കാണാൻ Qiwa തുറക്കുക','अनुबंध के लिए Qiwa खोलें','চুক্তি দেখতে Qiwa খুলুন','ஒப்பந்தம் பார்க்க Qiwa திற','ಒಪ್ಪಂದ ನೋಡಲು Qiwa ತೆರೆಯಿರಿ','معاہدہ دیکھنے کے لیے Qiwa کھولیں'],
+externalCheck:['External services open separately. Re-enter figures in HRSD; sign in to Qiwa Individuals to find your contract. AqdLens does not send your entries.','تفتح الخدمات خارج الأداة. أعد إدخال الأرقام لدى الوزارة وسجل الدخول إلى قوى أفراد لعرض عقدك. لا ترسل الأداة بياناتك.','പുറത്തെ സേവനങ്ങൾ വേറെ തുറക്കും. HRSDയിൽ തുകകൾ വീണ്ടും നൽകുക; കരാറിന് Qiwa Individualsൽ ലോഗിൻ ചെയ്യുക. AqdLens വിവരങ്ങൾ അയക്കില്ല.','बाहरी सेवाएँ अलग खुलेंगी। HRSD में आँकड़े फिर भरें; अनुबंध के लिए Qiwa Individuals में लॉग इन करें। AqdLens आपकी प्रविष्टियाँ नहीं भेजता।','বাহ্যিক সেবা আলাদা খুলবে। HRSD-তে অঙ্ক আবার দিন; চুক্তির জন্য Qiwa Individuals-এ লগইন করুন। AqdLens তথ্য পাঠায় না।','வெளிச் சேவைகள் தனியாகத் திறக்கும். HRSD-இல் தொகைகளை மீண்டும் உள்ளிடவும்; ஒப்பந்தத்திற்கு Qiwa Individuals-இல் உள்நுழையவும். AqdLens தகவலை அனுப்பாது.','ಹೊರಗಿನ ಸೇವೆಗಳು ಪ್ರತ್ಯೇಕವಾಗಿ ತೆರೆಯುತ್ತವೆ. HRSDನಲ್ಲಿ ಅಂಕಿ ಮತ್ತೆ ನಮೂದಿಸಿ; ಒಪ್ಪಂದಕ್ಕೆ Qiwa Individuals ಪ್ರವೇಶಿಸಿ. AqdLens ಮಾಹಿತಿಯನ್ನು ಕಳುಹಿಸುವುದಿಲ್ಲ.','بیرونی خدمات الگ کھلیں گی۔ HRSD پر اعداد دوبارہ درج کریں؛ معاہدے کے لیے Qiwa Individuals میں لاگ ان کریں۔ AqdLens آپ کے اندراجات نہیں بھیجتا۔'],
+outdoorMode:['Outdoor / light mode','الوضع الفاتح / الخارجي','ഔട്ട്ഡോർ / ലൈറ്റ് മോഡ്','बाहर / हल्का मोड','বাইরে / হালকা মোড','வெளிப்புற / ஒளி முறை','ಹೊರಾಂಗಣ / ಬೆಳಕಿನ ಮೋಡ್','بیرونی / روشن موڈ'],
+scopeTitle:['Who this tool is for','لمن هذه الأداة؟','ഈ ടൂൾ ആർക്കാണ്','यह टूल किसके लिए है','এই টুল কাদের জন্য','இந்தக் கருவி யாருக்கானது','ಈ ಸಾಧನ ಯಾರಿಗಾಗಿ','یہ ٹول کس کے لیے ہے'],
+scopeNotice:['For workers covered by Saudi Labor Law. Not for domestic workers, including housemaids and private household drivers, who have separate rules.','للعاملين الخاضعين لنظام العمل السعودي. لا يشمل العمالة المنزلية، مثل العاملات المنزليات والسائقين الخاصين، إذ تسري عليهم أنظمة منفصلة.','സൗദി തൊഴിൽ നിയമത്തിന് കീഴിലുള്ള തൊഴിലാളികൾക്കായി. വീട്ടുജോലിക്കാർക്കും സ്വകാര്യ വീട്ടിലെ ഡ്രൈവർമാർക്കും ബാധകമല്ല; അവർക്ക് പ്രത്യേക നിയമങ്ങളുണ്ട്.','सऊदी श्रम कानून के अंतर्गत आने वाले कर्मचारियों के लिए। घरेलू कामगारों और निजी घरेलू ड्राइवरों के लिए नहीं; उनके नियम अलग हैं।','সৌদি শ্রম আইনের আওতাভুক্ত কর্মীদের জন্য। গৃহকর্মী ও ব্যক্তিগত গৃহস্থালি চালকদের জন্য নয়; তাঁদের আলাদা নিয়ম আছে।','சவுதி தொழிலாளர் சட்டத்தின் கீழ் உள்ள பணியாளர்களுக்கானது. வீட்டுப் பணியாளர்கள் மற்றும் தனியார் வீட்டின் ஓட்டுநர்களுக்கானது அல்ல; அவர்களுக்குத் தனி விதிகள் உள்ளன.','ಸೌದಿ ಕಾರ್ಮಿಕ ಕಾನೂನಿನ ವ್ಯಾಪ್ತಿಯ ಕಾರ್ಮಿಕರಿಗಾಗಿ. ಮನೆಕೆಲಸದವರು ಮತ್ತು ಖಾಸಗಿ ಮನೆಯ ಚಾಲಕರಿಗಾಗಿ ಅಲ್ಲ; ಅವರಿಗೆ ಪ್ರತ್ಯೇಕ ನಿಯಮಗಳಿವೆ.','سعودی لیبر قانون کے تحت آنے والے کارکنوں کے لیے۔ گھریلو ملازمین اور نجی گھریلو ڈرائیوروں کے لیے نہیں؛ ان کے الگ قواعد ہیں۔'],
+domesticHelp:['Domestic-worker guidance: Musaned','إرشادات العمالة المنزلية: مساند','വീട്ടുജോലിക്കാർ: Musaned','घरेलू कामगार मार्गदर्शन: Musaned','গৃহকর্মীদের নির্দেশনা: Musaned','வீட்டுப் பணியாளர் வழிகாட்டல்: Musaned','ಮನೆಕೆಲಸದವರ ಮಾರ್ಗದರ್ಶನ: Musaned','گھریلو ملازمین کی رہنمائی: مساند'],
+sharedSalary:['Using your salary entered above','باستخدام الراتب المدخل أعلاه','മുകളിൽ നൽകിയ ശമ്പളം ഉപയോഗിക്കുന്നു','ऊपर दर्ज वेतन का उपयोग','উপরে দেওয়া বেতন ব্যবহার হচ্ছে','மேலே உள்ளிட்ட சம்பளம் பயன்படுத்தப்படுகிறது','ಮೇಲೆ ನಮೂದಿಸಿದ ವೇತನ ಬಳಸಲಾಗಿದೆ','اوپر درج تنخواہ استعمال ہو رہی ہے'],
+editSalary:['Edit salary','تعديل الراتب','ശമ്പളം മാറ്റുക','वेतन बदलें','বেতন সম্পাদনা','சம்பளத்தை மாற்று','ವೇತನ ಬದಲಿಸಿ','تنخواہ بدلیں'],
+saveImage:['Create summary image','إنشاء صورة الملخص','സംഗ്രഹ ചിത്രം ഉണ്ടാക്കുക','सारांश चित्र बनाएँ','সারাংশের ছবি তৈরি','சுருக்கப் படம் உருவாக்கு','ಸಾರಾಂಶ ಚಿತ್ರ ರಚಿಸಿ','خلاصے کی تصویر بنائیں'],
+shareImage:['Share image','مشاركة الصورة','ചിത്രം പങ്കിടുക','चित्र साझा करें','ছবি শেয়ার','படத்தைப் பகிர்','ಚಿತ್ರ ಹಂಚಿ','تصویر شیئر کریں'],
+downloadImage:['Download PNG','تنزيل PNG','PNG ഡൗൺലോഡ്','PNG डाउनलोड','PNG ডাউনলোড','PNG பதிவிறக்கு','PNG ಡೌನ್‌ಲೋಡ್','PNG ڈاؤن لوڈ'],
+imageHelp:['Create an image of the current result, then download it or choose WhatsApp from your device’s share menu. Includes the figures you entered.','أنشئ صورة للنتيجة الحالية، ثم نزّلها أو اختر واتساب من قائمة المشاركة في جهازك. تتضمن الأرقام التي أدخلتها.','നിലവിലെ ഫലത്തിന്റെ ചിത്രം ഉണ്ടാക്കി ഡൗൺലോഡ് ചെയ്യുക, അല്ലെങ്കിൽ ഫോണിന്റെ ഷെയർ മെനുവിൽ WhatsApp തിരഞ്ഞെടുക്കുക. നൽകിയ തുകകൾ ഉൾപ്പെടും.','वर्तमान परिणाम का चित्र बनाएँ, फिर डाउनलोड करें या डिवाइस के शेयर मेनू से WhatsApp चुनें। आपके दर्ज आँकड़े शामिल होंगे।','বর্তমান ফলের ছবি তৈরি করে ডাউনলোড করুন বা ডিভাইসের শেয়ার মেনুতে WhatsApp বেছে নিন। আপনার দেওয়া অঙ্ক থাকবে।','தற்போதைய முடிவின் படத்தை உருவாக்கி பதிவிறக்கவும் அல்லது சாதனத்தின் பகிர்வு பட்டியலில் WhatsApp தேர்ந்தெடுக்கவும். உள்ளிட்ட தொகைகள் இடம்பெறும்.','ಈ ಫಲಿತಾಂಶದ ಚಿತ್ರ ರಚಿಸಿ, ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಅಥವಾ ಸಾಧನದ ಹಂಚಿಕೆ ಮೆನುವಿನಲ್ಲಿ WhatsApp ಆರಿಸಿ. ನಮೂದಿಸಿದ ಅಂಕಿಗಳು ಸೇರಿರುತ್ತವೆ.','موجودہ نتیجے کی تصویر بنائیں، پھر ڈاؤن لوڈ کریں یا فون کے شیئر مینو سے WhatsApp چنیں۔ درج کردہ اعداد شامل ہوں گے۔'],
+imageReady:['Image ready. Download it or share it below.','الصورة جاهزة. نزّلها أو شاركها أدناه.','ചിത്രം തയ്യാറാണ്. താഴെ ഡൗൺലോഡ് ചെയ്യുകയോ പങ്കിടുകയോ ചെയ്യൂ.','चित्र तैयार है। नीचे डाउनलोड या साझा करें।','ছবি প্রস্তুত। নিচে ডাউনলোড বা শেয়ার করুন।','படம் தயார். கீழே பதிவிறக்கவும் அல்லது பகிரவும்.','ಚಿತ್ರ ಸಿದ್ಧವಾಗಿದೆ. ಕೆಳಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಅಥವಾ ಹಂಚಿ.','تصویر تیار ہے۔ نیچے ڈاؤن لوڈ یا شیئر کریں۔'],
+imageFailed:['Could not create or share the image. Try downloading it, or use Copy result.','تعذر إنشاء الصورة أو مشاركتها. جرّب تنزيلها أو نسخ النتيجة.','ചിത്രം ഉണ്ടാക്കാനോ പങ്കിടാനോ കഴിഞ്ഞില്ല. ഡൗൺലോഡ് അല്ലെങ്കിൽ ഫലം പകർത്തൽ ഉപയോഗിക്കുക.','चित्र बनाना या साझा करना संभव नहीं। डाउनलोड या परिणाम कॉपी करें।','ছবি তৈরি বা শেয়ার হয়নি। ডাউনলোড বা ফল কপি করুন।','படம் உருவாக்கவோ பகிரவோ முடியவில்லை. பதிவிறக்கம் அல்லது முடிவை நகலெடு பயன்படுத்தவும்.','ಚಿತ್ರ ರಚಿಸಲು ಅಥವಾ ಹಂಚಲು ಆಗಲಿಲ್ಲ. ಡೌನ್‌ಲೋಡ್ ಅಥವಾ ಫಲಿತಾಂಶ ನಕಲು ಬಳಸಿ.','تصویر بن یا شیئر نہیں ہو سکی۔ ڈاؤن لوڈ یا نتیجہ نقل کریں۔'],
 advancedSettings:['Work schedule & advanced settings','جدول العمل والإعدادات المتقدمة','ജോലി സമയവും വിപുലമായ ക്രമീകരണങ്ങളും','कार्य समय और उन्नत सेटिंग','কাজের সময় ও উন্নত সেটিং','வேலை நேரம் மற்றும் கூடுதல் அமைப்புகள்','ಕೆಲಸದ ವೇಳಾಪಟ್ಟಿ ಮತ್ತು ಹೆಚ್ಚುವರಿ ಆಯ್ಕೆಗಳು','کام کا شیڈول اور مزید ترتیبات'],
 assumptionsTitle:['Calculation assumptions','افتراضات الحساب','കണക്കിന്റെ അനുമാനങ്ങൾ','गणना की मान्यताएँ','গণনার অনুমান','கணக்கீட்டு அனுமானங்கள்','ಲೆಕ್ಕಾಚಾರದ ಊಹೆಗಳು','حساب کے مفروضے'],
 estimateOnly:['Estimate based on your entries.','تقدير بناءً على بياناتك.','നിങ്ങളുടെ വിവരങ്ങൾ അടിസ്ഥാനമാക്കിയുള്ള ഏകദേശ കണക്ക്.','आपकी जानकारी पर आधारित अनुमान।','আপনার তথ্যের ভিত্তিতে অনুমান।','உங்கள் தகவல்களின் அடிப்படையிலான மதிப்பீடு.','ನಿಮ್ಮ ಮಾಹಿತಿಯ ಆಧಾರದ ಅಂದಾಜು.','آپ کی معلومات پر مبنی تخمینہ۔'],
@@ -1262,7 +1318,7 @@ function switchTab(name,focus=false){activeTab=name;document.querySelectorAll('[
 document.querySelectorAll('[data-tab]').forEach(b=>{b.addEventListener('click',()=>switchTab(b.dataset.tab));b.addEventListener('keydown',e=>{const tabs=[...document.querySelectorAll('[data-tab]')];let index=tabs.indexOf(b);if(e.key==='Home')index=0;else if(e.key==='End')index=tabs.length-1;else if(e.key==='ArrowRight')index=(index+(['ar','ur'].includes(lang)?2:1))%3;else if(e.key==='ArrowLeft')index=(index+(['ar','ur'].includes(lang)?1:2))%3;else return;e.preventDefault();switchTab(tabs[index].dataset.tab,true)})});
 document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',()=>switchTab(a.dataset.jump)));
 /* Legal award calculation: at exactly 5 years resignation remains one-third. */
-function calculateEOSB(wage,years,months,reason,serviceOverride){const service=serviceOverride??(years+months/12);const first=wage*.5*Math.min(service,5);const after=wage*Math.max(0,service-5);const factor=reason==='resign'?(service<2?0:service<=5?1/3:service<10?2/3:1):1;return{service,first,after,factor,total:(first+after)*factor}}
+function calculateEOSB(wage,years,months,reason,serviceOverride){if(!['full','resign','marriage87','birth87','force87'].includes(reason))return null;const service=serviceOverride??(years+months/12);const first=wage*.5*Math.min(service,5);const after=wage*Math.max(0,service-5);const factor=reason==='resign'?(service<2?0:service<=5?1/3:service<10?2/3:1):1;return{service,first,after,factor,total:(first+after)*factor}}
 let syncingInputs=false;
 function syncSplitToOvertime(basic,allow){if(syncingInputs)return;syncingInputs=true;$('ot-basic').value=Number(basic.toFixed(2));$('ot-allow').value=Number(allow.toFixed(2));syncingInputs=false;updateOvertime();}
 function syncOvertimeToSplit(){
@@ -1274,7 +1330,7 @@ function syncOvertimeToSplit(){
 }
 function updateSplit(){const total=inputNumber('package'),share=Number($('basic-range').value);const valid=validWage(total)&&total>=1;$('split-error').hidden=valid;$('package').setAttribute('aria-invalid',String(!valid));set('share',number(share,2)+'%');$('basic-percent').value=Number(share.toFixed(4));$('basic-range').setAttribute('aria-valuetext',number(share,0)+'% '+t('basic'));$('bar-basic').style.width=share+'%';$('bar-allow').style.width=(100-share)+'%';$('split-bar').setAttribute('aria-label',t('barFormat',{b:number(share,0),a:number(100-share,0)}));if(!valid){['basic-amount','allow-amount','offer-basic','fair-basic','offer-allow','fair-allow','offer-ot','fair-ot','ot-loss','ot-comparison','legal-five','underpayment'].forEach(id=>set(id,'—'));return}const basic=total*share/100,fair=total*.7;syncSplitToOvertime(basic,total-basic);const divisor=selectedOvertimeBasis().divisor;const overtime=(total+.5*basic)/divisor,fairOT=(total+.5*fair)/divisor;set('basic-amount',money(basic));set('allow-amount',money(total-basic));set('offer-basic',number(basic));set('fair-basic',number(fair));set('offer-allow',money(total-basic));set('fair-allow',money(total-fair));set('offer-ot',money(overtime));set('fair-ot',money(fairOT));const diff=fairOT-overtime;set('ot-loss',(Math.abs(diff)<0.005?'':diff>0?'−':'+')+money(Math.abs(diff))+' '+t('perHour'));set('ot-comparison',Math.abs(diff)<0.005?t('otComparisonSame'):diff>0?t('otComparisonLower',{amount:number(diff)}):t('otComparisonHigher',{amount:number(-diff)}));set('legal-five',money(total*2.5));set('underpayment',money((total-basic)*2.5));if(!Number.isFinite(divisor)||divisor<=0||selectedOvertimeBasis().daily>24){['offer-ot','fair-ot','ot-loss'].forEach(id=>set(id,'—'));set('ot-comparison',t('otInvalid'));}}
 
-function updateEOSB(){const basic=inputNumber('eosb-basic'),allow=inputNumber('eosb-allow'),service=serviceInput();const wagesValid=validWage(basic)&&validWage(allow),valid=wagesValid&&!!service;const dates=$('service-mode').value==='dates';$('eosb-error').hidden=valid||(!service&&dates&&wagesValid);$('date-error').hidden=!dates||!!service;['eosb-basic','eosb-allow'].forEach(id=>$(id).setAttribute('aria-invalid',String(!validWage(inputNumber(id)))));$('years').setAttribute('aria-invalid',String(!dates&&!service));['service-start','service-end'].forEach(id=>$(id).setAttribute('aria-invalid',String(dates&&!service)));$('cliff').hidden=true;if(!valid){['eosb-total','calc-wage','calc-tenure','calc-first','calc-after','calc-factor','wage-equation','award-equation'].forEach(id=>set(id,'—'));return;}const result=calculateEOSB(basic+allow,0,0,$('reason').value,service.service);set('eosb-total',number(result.total));set('calc-wage',money(basic+allow));set('calc-tenure',service.dates?t('serviceDays',{d:number(service.days,0),y:number(service.service,4)}):t('tenureFormat',{y:number(service.years,0),m:number(service.months,0)}));set('calc-first',money(result.first));set('calc-after',money(result.after));set('calc-factor',number(result.factor*100,2)+'%');set('wage-equation',number(basic)+' + '+number(allow)+' = '+money(basic+allow));set('award-equation','('+number(result.first)+' + '+number(result.after)+') × '+number(result.factor*100,2)+'% = '+money(result.total));$('cliff').hidden=!($('reason').value==='resign'&&result.service>=1.7&&result.service<2);}
+function updateEOSB(){const reasonReady=updateSeparationState();const basic=inputNumber('eosb-basic'),allow=inputNumber('eosb-allow'),service=serviceInput();const wagesValid=validWage(basic)&&validWage(allow),valid=wagesValid&&!!service&&reasonReady;set('wage-preview',wagesValid?money(basic+allow):'—');const dates=$('service-mode').value==='dates';$('eosb-error').hidden=(wagesValid&&!!service)||(!service&&dates&&wagesValid);$('date-error').hidden=!dates||!!service;['eosb-basic','eosb-allow'].forEach(id=>$(id).setAttribute('aria-invalid',String(!validWage(inputNumber(id)))));$('years').setAttribute('aria-invalid',String(!dates&&!service));['service-start','service-end'].forEach(id=>$(id).setAttribute('aria-invalid',String(dates&&!service)));$('cliff').hidden=true;if(!valid){['eosb-total','calc-wage','calc-tenure','calc-first','calc-after','calc-factor','wage-equation','award-equation'].forEach(id=>set(id,'—'));return;}const result=calculateEOSB(basic+allow,0,0,$('reason').value,service.service);set('eosb-total',number(result.total));set('calc-wage',money(basic+allow));set('calc-tenure',service.dates?t('serviceDays',{d:number(service.days,0),y:number(service.service,4)}):t('tenureFormat',{y:number(service.years,0),m:number(service.months,0)}));set('calc-first',money(result.first));set('calc-after',money(result.after));set('calc-factor',number(result.factor*100,2)+'%');set('wage-equation',number(basic)+' + '+number(allow)+' = '+money(basic+allow));set('award-equation','('+number(result.first)+' + '+number(result.after)+') × '+number(result.factor*100,2)+'% = '+money(result.total));$('cliff').hidden=!($('reason').value==='resign'&&result.service>=1.7&&result.service<2);}
 
 function createQuestions(){const host=$('questions');host.replaceChildren();[['passport','qPassport'],['probation','qProbation'],['basic','qBasic']].forEach(([key,label],i)=>{const field=document.createElement('fieldset');field.className='question';const legend=document.createElement('legend');legend.textContent=number(i+1,0)+'. '+t(label);field.append(legend);const choices=document.createElement('div');choices.className='choices';[['yes','yes'],['no','no'],['unsure','unsure']].forEach(([value,text])=>{const lab=document.createElement('label');lab.className='choice';const radio=document.createElement('input');radio.type='radio';radio.name='audit-'+key;radio.value=value;radio.checked=answers[key]===value;radio.addEventListener('change',()=>{answers[key]=value;updateAudit()});const span=document.createElement('span');span.textContent=t(text);lab.append(radio,span);choices.append(lab)});field.append(choices);host.append(field)})}
 function updateAudit(){updateHR();const done=Object.values(answers).filter(v=>v==='yes'||v==='no').length;const flags=Object.values(answers).filter(v=>v==='yes').length;const started=Object.values(answers).some(Boolean);set('audit-status',t(flags?'statusReview':done===3?'statusClear':started?'statusIncomplete':'statusStart'));set('audit-summary',t('auditProgress',{n:number(done,0)}));const host=$('audit-alerts');host.replaceChildren();[['passport','passportTitle','passportAlert','passportCite'],['probation','probationTitle','probationAlert','probationCite'],['basic','salaryTitle','salaryAlert','salaryCite']].forEach(([key,title,message,cite])=>{if(answers[key]!=='yes')return;const el=document.createElement('div');el.className='alert'+(key==='basic'?' amber-alert':'');const strong=document.createElement('strong'),p=document.createElement('p'),small=document.createElement('small');strong.textContent=t(title);p.textContent=t(message);small.textContent=t(cite);el.append(strong,p,small);host.append(el)});updateShare();}
@@ -1308,6 +1364,11 @@ function calculateOvertime(basic,allow,hours,daily,divisor=30*daily){
  const actual=(basic+allow)/divisor,premium=.5*basic/divisor;
  return{divisor,actual,premium,rate:actual+premium,total:(actual+premium)*hours};
 }
+function isException87(){return ['marriage87','birth87','force87'].includes($('reason').value);}
+function reasonKey(){return({full:'fullReason',resign:'resignReason',marriage87:'marriage87',birth87:'birth87',force87:'force87',review:'reviewReason'})[$('reason').value]||'reviewReason';}
+function updateSeparationState(){const exception=isException87(),review=!['full','resign','marriage87','birth87','force87'].includes($('reason').value);$('exception-panel').hidden=!exception;$('separation-review').hidden=!review;return !review&&(!exception||$('exception-confirm').checked);}
+$('reason').addEventListener('change',()=>{$('exception-confirm').checked=false;updateEOSB();updateShare();});
+$('exception-confirm').addEventListener('change',()=>{updateEOSB();updateShare();});
 function overtimeInput(){
  const basic=inputNumber('ot-basic'),allow=inputNumber('ot-allow'),ordinary=inputNumber('ot-hours');
  const holiday=$('ot-holiday').checked?inputNumber('ot-holiday-hours'):0,basis=selectedOvertimeBasis();
@@ -1315,6 +1376,7 @@ function overtimeInput(){
  return validWage(basic)&&validWage(allow)&&validWage(basic+allow)&&Number.isFinite(ordinary)&&ordinary>=0&&Number.isFinite(holiday)&&holiday>=0&&hours<=10000&&Number.isFinite(basis.daily)&&basis.daily>=1&&basis.daily<=24?{basic,allow,ordinary,holiday,hours,...basis}:null;
 }
 function updateOvertime(){
+ set('shared-salary-values',t('basic')+': '+money(inputNumber('ot-basic'))+' · '+t('allowances')+': '+money(inputNumber('ot-allow')));
  $('ot-daily').disabled=$('ot-ramadan').checked;
  $('holiday-field').hidden=!$('ot-holiday').checked;$('ot-holiday-hours').disabled=!$('ot-holiday').checked;
  const input=overtimeInput();$('ot-error').hidden=!!input;
@@ -1394,9 +1456,10 @@ function reportData(){
   updateSplit();row('package',money(total));row('basicShare',$('share').textContent);row('basic',$('basic-amount').textContent);row('allowances',$('allow-amount').textContent);row('benchmark',money(total*.7));row('otHour',$('offer-ot').textContent);row('benchmark',t('otHour')+': '+$('fair-ot').textContent);row('otReduction',$('ot-loss').textContent);row('legalEosb',$('legal-five').textContent);row('gapLabel',$('underpayment').textContent);
   notes.push(t('benchmarkNote'),t('legalFiveDesc'),t('gapNote'),t('splitMethod'),t('wageNote'));
  }else if(activeTab==='eosb'){
-  updateEOSB();if(!serviceInput()||!validWage(inputNumber('eosb-basic'))||!validWage(inputNumber('eosb-allow')))return null;
+  updateEOSB();if(!updateSeparationState()||!serviceInput()||!validWage(inputNumber('eosb-basic'))||!validWage(inputNumber('eosb-allow')))return null;
   if($('service-mode').value==='dates'){row('startDate',$('service-start').value);row('endDate',$('service-end').value);}
-  row('monthlyBasic',money(inputNumber('eosb-basic')));row('eligibleAllow',money(inputNumber('eosb-allow')));row('reason',t($('reason').value==='resign'?'resignReason':'fullReason'));
+  row('monthlyBasic',money(inputNumber('eosb-basic')));row('eligibleAllow',money(inputNumber('eosb-allow')));row('reason',t(reasonKey()));
+  if(isException87())notes.push(t('exception87Note'),t('exceptionConfirm'));
   [['eligibleWage','calc-wage'],['tenure','calc-tenure'],['firstFive','calc-first'],['afterFive','calc-after'],['resignFactor','calc-factor']].forEach(([key,id])=>row(key,$(id).textContent));row('estimatedBenefit',$('eosb-total').textContent+' '+t('sar'));
   if(!$('cliff').hidden)notes.push(t('cliffTitle')+': '+t('cliffDesc'));
   notes.push(t('eosbMethod'),t('wageNote'),t('exceptions'),t($('service-mode').value==='dates'?'dateNote':'calendar'));
@@ -1472,6 +1535,10 @@ function resetCurrentTool(){
  $('result-copy-fallback').hidden=true;$('result-copy-fallback').value='';updateShare();set('result-action-status',t('toolReset'));
 }
 $('reset-tool').addEventListener('click',resetCurrentTool);
+/* Simple view closes optional explanations while retaining warnings and assumptions. */
+function applySimpleView(enabled){$('simple-view').checked=enabled;document.querySelectorAll('details.method').forEach(panel=>panel.open=!enabled);try{localStorage.setItem('aqdlens-simple',enabled?'1':'0')}catch(_){}}
+$('simple-view').addEventListener('change',()=>applySimpleView($('simple-view').checked));
+try{if(localStorage.getItem('aqdlens-simple')==='1')applySimpleView(true)}catch(_){}
 window.addEventListener('beforeprint',prepareReport);
 /* Feedback remains unsent until the visitor sends the email draft themselves. */
 function feedbackText(){const message=$('feedback-message').value.trim();if(message.length<10||message.length>900){$('feedback-status').hidden=false;set('feedback-status',t('feedbackInvalid'));$('feedback-message').setAttribute('aria-invalid','true');$('feedback-message').focus();return null}$('feedback-message').setAttribute('aria-invalid','false');const key={bug:'feedbackBug',translation:'feedbackTranslation',suggestion:'feedbackSuggestion'}[$('feedback-type').value];return['AqdLens · '+t('feedbackTitle'),...(translationContext?[t('feedbackContext')+': '+t(TOOL_KEYS[translationContext])]:[]),t('feedbackCategory')+': '+t(key),t('language')+': '+$('language').selectedOptions[0].textContent,'',message].join('\n')}
@@ -1479,6 +1546,48 @@ function feedbackStatus(key){set('feedback-status',t(key));$('feedback-status').
 $('feedback-form').addEventListener('submit',e=>{e.preventDefault();const text=feedbackText();if(text===null)return;const draft='mailto:joemanuthomas@gmail.com?subject='+encodeURIComponent('AqdLens · '+t('feedbackTitle'))+'&body='+encodeURIComponent(text);window.location.href=draft;feedbackStatus('feedbackDraftOpened')});
 $('copy-feedback').addEventListener('click',async()=>{const text=feedbackText();if(text===null)return;try{await navigator.clipboard.writeText(text);feedbackStatus('feedbackCopied')}catch(_){feedbackStatus('feedbackCopyFailed')}});
 $('download-feedback').addEventListener('click',()=>{const text=feedbackText();if(text===null)return;const url=URL.createObjectURL(new Blob(['\ufeff'+text],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='aqdlens-feedback.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);feedbackStatus('feedbackDownloaded')});
+
+/* Language access and the outdoor preference never store financial inputs. */
+function refreshLanguageButtons(){document.querySelectorAll('[data-locale]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.locale===lang)));}
+document.querySelectorAll('[data-locale]').forEach(button=>button.addEventListener('click',()=>{localize(button.dataset.locale);refreshLanguageButtons();clearSummaryImage();}));
+$('language').addEventListener('change',()=>{localize($('language').value);refreshLanguageButtons();clearSummaryImage();});
+refreshLanguageButtons();
+function applyOutdoor(enabled){document.documentElement.setAttribute('data-theme',enabled?'light':'dark');$('outdoor-mode').checked=enabled;try{localStorage.setItem('aqdlens-outdoor',enabled?'1':'0')}catch(_){}}
+try{applyOutdoor(localStorage.getItem('aqdlens-outdoor')==='1')}catch(_){}
+$('outdoor-mode').addEventListener('change',()=>applyOutdoor($('outdoor-mode').checked));
+$('edit-salary').addEventListener('click',()=>{$('package').scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});$('package').focus({preventScroll:true});});
+
+/* A local PNG receipt; a second explicit tap shares the prepared file. */
+let summaryFile=null,summaryURL=null,summaryGeneration=0,summaryStamp='';
+function clearSummaryImage(){summaryGeneration++;summaryFile=null;if(summaryURL)URL.revokeObjectURL(summaryURL);summaryURL=null;$('image-download').hidden=true;$('share-image').hidden=true;set('image-status','');}
+function summaryImageData(){
+ const report=reportData();if(!report)return null;
+ if(activeTab==='split'){const input=overtimeInput();if(!input)return null;const r=calculateOvertime(input.basic,input.allow,input.hours,input.daily,input.divisor);return{title:t('splitTab'),rows:[['package',money(input.basic+input.allow)],['basic',money(input.basic)],['allowances',money(input.allow)],['actualHourly',money(r.actual)],['otHour',money(r.rate)],['overtimeTotal',money(r.total)],['hoursPerMonth',number(input.divisor)],['legalEosb',$('legal-five').textContent]].map(([key,value])=>[t(key),value]),notes:[t('basisCaution')]};}
+ return report;
+}
+function wrapImageText(ctx,text,width){const out=[];for(const paragraph of String(text).split('\n')){let line='';for(const word of paragraph.split(/\s+/)){const next=line?line+' '+word:word;if(ctx.measureText(next).width>width&&line){out.push(line);line=word;}else line=next;}out.push(line);}return out;}
+async function buildSummaryImage(){
+ const data=summaryImageData();if(!data)throw new Error('invalid');
+ const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');if(!ctx)throw new Error('canvas');
+ const rtl=['ar','ur'].includes(lang),width=1080,pad=64,blocks=[];
+ const add=(text,size=27,bold=false,color='#102030',gap=20)=>{ctx.font=(bold?'700 ':'400 ')+size+'px system-ui, sans-serif';const lines=wrapImageText(ctx,text,width-pad*2);blocks.push({lines,size,bold,color,gap});};
+ add('AqdLens • عقد لينس',44,true,'#006653',30);add(data.title,34,true);add(t('estimateOnly'),25,false);
+ data.rows.forEach(([label,value])=>{add(label,24,false,'#334155',5);add(value,32,true,'#102030',24);});
+ (data.notes||[]).forEach(note=>add(note,23,false,'#334155',16));
+ add(t('scopeNotice'),23,false,'#334155');add(t('independence'),24,true);add('aqdlens.vercel.app',24,true,'#006653');
+ canvas.width=width;canvas.height=pad*2+110+blocks.reduce((sum,b)=>sum+b.lines.length*b.size*1.5+b.gap,0);
+ ctx.fillStyle='#ffffff';ctx.fillRect(0,0,width,canvas.height);ctx.fillStyle='#006653';ctx.fillRect(0,0,width,12);
+ const logoSVG='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72"><defs>'+$('emerald').outerHTML+'</defs>'+$('aqdlens-logo').innerHTML+'</svg>';
+ const logo=new Image();await new Promise((resolve,reject)=>{logo.onload=resolve;logo.onerror=()=>reject(new Error('logo'));logo.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(logoSVG);});ctx.drawImage(logo,rtl?width-pad-80:pad,pad,80,90);
+ ctx.direction=rtl?'rtl':'ltr';ctx.textAlign=rtl?'right':'left';ctx.textBaseline='top';let y=pad+110;
+ for(const b of blocks){ctx.font=(b.bold?'700 ':'400 ')+b.size+'px system-ui, sans-serif';ctx.fillStyle=b.color;for(const line of b.lines){ctx.fillText(line,rtl?width-pad:pad,y);y+=b.size*1.5;}y+=b.gap;}
+ const blob=await new Promise((resolve,reject)=>canvas.toBlob(value=>value?resolve(value):reject(new Error('encode')),'image/png'));
+ return blob;
+}
+$('save-image').addEventListener('click',async()=>{clearSummaryImage();const generation=summaryGeneration,stamp=lang+'|'+currentResultText();$('save-image').disabled=true;try{if(document.fonts?.ready)await document.fonts.ready;if(generation!==summaryGeneration)return;const blob=await buildSummaryImage();if(generation!==summaryGeneration||stamp!==lang+'|'+currentResultText())return;summaryStamp=stamp;summaryURL=URL.createObjectURL(blob);summaryFile=typeof File==='function'?new File([blob],'aqdlens-summary.png',{type:'image/png'}):null;const link=$('image-download');link.href=summaryURL;link.download='aqdlens-summary.png';link.hidden=false;$('share-image').hidden=!(summaryFile&&navigator.canShare?.({files:[summaryFile]}));set('image-status',t('imageReady'));}catch(_){if(generation===summaryGeneration)set('image-status',summaryImageData()?t('imageFailed'):t('printInvalid'));}finally{$('save-image').disabled=false;}});
+$('image-download').addEventListener('click',event=>{if(summaryStamp!==lang+'|'+currentResultText()){event.preventDefault();clearSummaryImage();set('image-status',t('saveImage'));}});
+$('share-image').addEventListener('click',async()=>{if(!summaryFile)return;if(summaryStamp!==lang+'|'+currentResultText()){clearSummaryImage();set('image-status',t('saveImage'));return;}try{await navigator.share({files:[summaryFile],title:'AqdLens'});}catch(error){if(error.name!=='AbortError')set('image-status',t('imageFailed'));}});
+document.querySelectorAll('input,select,[data-tab],#reset-tool').forEach(el=>el.addEventListener(el.tagName==='BUTTON'?'click':'input',clearSummaryImage));
 
 /* Optional browser WebMCP: uses the same validated calculation and visible inputs.
    Browsers without modelContext simply use the normal interface. */
