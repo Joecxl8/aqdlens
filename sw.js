@@ -1,6 +1,6 @@
 'use strict';
 // Cache only the public app shell. Inputs and feedback never reach this worker.
-const CACHE='aqdlens-app-20261002-v1';
+const CACHE='aqdlens-app-20261002-v6';
 const CORE=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png'];
 const base=new URL('./',self.registration.scope);
 const allowed=new Set(CORE.map(path=>new URL(path,base).pathname));
